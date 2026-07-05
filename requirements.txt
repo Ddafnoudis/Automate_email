@@ -1,0 +1,5 @@
+packaging==26.0
+schedule==1.2.2
+secure-smtplib==0.1.1
+setuptools==82.0.1
+wheel==0.47.0
