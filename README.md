@@ -45,9 +45,6 @@ If you would like to check the open crontab sessions
 
 **Note: If you need to reset the crontab in bash write this command: `crontab -r`**
 
-
-
-1) What is SMTP?
 # Requiremnents
 * secure-smtplib package: Main package for Secure SMTP and email exchanging. 
 * dotenv: Read from .env file and put it into os.environ. 
@@ -64,4 +61,4 @@ Python 3.12.13
 
 
 # Author
-Ddafnoudis
+[Ddafnoudis](https://github.com/Ddafnoudis)
