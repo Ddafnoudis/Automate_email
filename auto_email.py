@@ -4,27 +4,21 @@ import getpass
 import os
 import smtplib
 from smtplib import SMTP_SSL
-from dotenv import load_dotenv
+from dotenv import load_dotenv # 
 from email.mime.text import MIMEText
 
-load_dotenv()
 # Host configuration
 HOST: str = "smtp.gmail.com"
 # PORT configuration
 PORT: int = 587
 
+# Load environment variables from .env file
+load_dotenv()
+
 # Define the sender and recipient email addresses
-SENDER: str = "dimitrios.dafnoudis@gmail.com"
-RECIPIENT: str = "ddafnoudis1995@gmail.com"
-
-# PASSWORD = os.environ["dbij hfcx illa dgsh"]
+SENDER = os.environ["SENDER"]
+RECIPIENT = os.environ["RECIPIENT"]
 PASSWORD = os.environ["GMAIL_APP_PASSWORD"]
-
-# if PASSWORD == "":
-#     time.sleep(2)
-#     PASSWORD = APP_PASSWORD
-#     print("Using app password from environment variable.")
-
 
 # Create the email message
 MESSAGE: str = """Subject: Test Email 
@@ -42,9 +36,9 @@ smtp = smtplib.SMTP(HOST, PORT)
 status_code, response = smtp.ehlo()
 print(f"Status code: {status_code}, Response: {response.decode()}")
 
+# Confirm status
 if status_code == 250:
     print("Successfully connected to the SMTP server.")
-
 elif status_code == 421:
     print("Service not available, closing transmission channel.")
     sys.exit(1)
@@ -62,5 +56,6 @@ print(f"Login Status code: {login_status_code}, Login Response: {login_response.
 
 # Send the email
 smtp.sendmail(SENDER, RECIPIENT, MESSAGE)
+
 # Close the SMTP connection
 smtp.quit()
