@@ -1,11 +1,13 @@
 import sys
+import time
 import getpass
 import os
 import smtplib
 from smtplib import SMTP_SSL
+from dotenv import load_dotenv
 from email.mime.text import MIMEText
 
-
+load_dotenv()
 # Host configuration
 HOST: str = "smtp.gmail.com"
 # PORT configuration
@@ -15,19 +17,24 @@ PORT: int = 587
 SENDER: str = "dimitrios.dafnoudis@gmail.com"
 RECIPIENT: str = "ddafnoudis1995@gmail.com"
 
-# Provide password
-# PASSWORD: str = getpass.getpass(input(f"Enter your email password: "))
+# PASSWORD = os.environ["dbij hfcx illa dgsh"]
+PASSWORD = os.environ["GMAIL_APP_PASSWORD"]
 
-PASSWORD: str = getpass.getpass(f"Enter your email password for {SENDER}: ")
+# if PASSWORD == "":
+#     time.sleep(2)
+#     PASSWORD = APP_PASSWORD
+#     print("Using app password from environment variable.")
+
 
 # Create the email message
 MESSAGE: str = """Subject: Test Email 
-Hi,https://mail.google.com/mail/u/1/?hl=el&pli=1#inbox
+Hi,
 This is a test email sent from Python.
 
 Best,
 Test User
 """
+
 # Establish the SMTP connection server
 smtp = smtplib.SMTP(HOST, PORT)
 
