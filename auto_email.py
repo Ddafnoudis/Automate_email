@@ -1,7 +1,13 @@
-import sys
-import time
-import getpass
+"""
+This script sends an email using the SMTP protocol. 
+It connects to the Gmail SMTP server, 
+authenticates using the provided credentials, 
+and sends an email to the specified recipient.
+"""
+
 import os
+import sys
+import getpass
 import smtplib
 from smtplib import SMTP_SSL
 from dotenv import load_dotenv # 
