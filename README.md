@@ -1,7 +1,8 @@
-# Automate_email
+# <Title> 
+Automate_email
 
 # Objective
-
+Create an script where a specific and defined email will be send to recipients for a specific period. 
 
 # Theory
 
@@ -16,4 +17,4 @@ Python 3.12.13
 
 
 # Author
-Create an script where a specific and defined email will be send to recipients for a specific period. 
+
