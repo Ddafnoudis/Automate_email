@@ -45,7 +45,7 @@ If you would like to check the open crontab sessions
 
 **Note: If you need to reset the crontab in bash write this command: `crontab -r`**
 
-# Requiremnents
+# Requirements
 * secure-smtplib package: Main package for Secure SMTP and email exchanging. 
 * dotenv: Read from .env file and put it into os.environ. 
 **Note: Before using dotenv, create a file named .env in the same directory with the main script (auto_email.py). Then, insert the APP_PASSWORD (16-character password) to login to your email.**
