@@ -58,6 +58,7 @@ Python 3.12.13
 # Useful references:
 * [GuideRealm - How To Generate & Create App Password In Gmail Account- Full Guide](https://www.youtube.com/watch?v=7lXjlbYcpe4)
 * [All About Python - How To Send Email In Python | Smtplib Tutorial](https://www.youtube.com/watch?v=S465v4mWsRg)
+* [.env File Syntax Rules: Quoting, Comments, Multiline](https://env.dev/guides/env-file-syntax)
 
 
 # Author
