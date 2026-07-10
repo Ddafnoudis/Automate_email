@@ -4,7 +4,7 @@ Automate_email
 # Objective
 Create an script where a specific and defined email will be send to recipients for a specific period. 
 
-# Theory
+# General Requirements
 ### How to find the HOST name and the PORT number?
 In browser search bar type **<email provider> SMTP settings**
 
@@ -13,10 +13,15 @@ The user is asked to first set the email:
 2) Create an app password.
 3) dotenv package needs to have a file called *.env*. This file contains the app password code. In terminal (bash):
 
+>Note: If other type of mail is used, the user has follow the 2-step Verification process of that type of mail.
+
 * `touch .env`
 * `vim .env`
 * APP_PASSWORD=16-character-password --> No spaces between characters
-* SENDER email and RECIPIENT are also added to the .env file
+* SENDER email and RECIPIENT are also added to the .env file:
+    - If you have only one recepient edit in .env file -->  `RECIPIENT=recipient@mail.com`
+    - If multiple recipients edit in .env file --> `RECIPIENT="recipient_1@mail.com,recipient_2@mail.com"`
+        - In case of multiple recipients, the *auto_email.py* needs to be edited accordingly.
 * Save .env file in the same directory with the main script (auto_email.py)
 
 ### When script it's ready, how to automate the email to be sent every day?
@@ -45,7 +50,7 @@ If you would like to check the open crontab sessions
 
 **Note: If you need to reset the crontab in bash write this command: `crontab -r`**
 
-# Requirements
+# Package requirements
 * secure-smtplib package: Main package for Secure SMTP and email exchanging. 
 * dotenv: Read from .env file and put it into os.environ. 
 **Note: Before using dotenv, create a file named .env in the same directory with the main script (auto_email.py). Then, insert the APP_PASSWORD (16-character password) to login to your email.**
