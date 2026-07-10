@@ -23,6 +23,14 @@ The user is asked to first set the email:
     - If multiple recipients edit in .env file --> `RECIPIENT="recipient_1@mail.com,recipient_2@mail.com"`
         - In case of multiple recipients, the *auto_email.py* needs to be edited accordingly.
 * Save .env file in the same directory with the main script (auto_email.py)
+* Create a message in .txt format with the message in the email
+    - Format:
+    Subject: Title of the Subject
+    Greetings,
+    Message
+    Best,
+    Name of the sender
+
 
 ### When script it's ready, how to automate the email to be sent every day?
 
