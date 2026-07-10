@@ -9,6 +9,7 @@ import os
 import sys
 import getpass
 import smtplib
+from pathlib import Path
 from smtplib import SMTP_SSL
 from dotenv import load_dotenv # 
 from email.mime.text import MIMEText
@@ -23,20 +24,20 @@ load_dotenv()
 
 # Define the sender and recipient email addresses
 SENDER = os.environ["SENDER"]
-RECIPIENT = os.environ["RECIPIENT"]
+# For one recipient
+# RECIPIENT = os.environ["RECIPIENT"]
+
+# Fo r multiple recipients, split the string by comma
+RECIPIENT = os.getenv("RECIPIENT").split(",")
+
 PASSWORD = os.environ["GMAIL_APP_PASSWORD"]
 
 # Create the email message
-MESSAGE: str = """Subject: Test Email 
-Hi,
-This is a test email sent from Python.
-
-Best,
-Test User
-"""
+MESSAGE: Path = Path("email_message.txt").read_text(encoding="utf-8")
 
 # Establish the SMTP connection server
 smtp = smtplib.SMTP(HOST, PORT)
+
 
 # Status code of the response and the response message received from the server
 status_code, response = smtp.ehlo()
