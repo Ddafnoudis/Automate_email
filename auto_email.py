@@ -26,8 +26,7 @@ load_dotenv()
 SENDER = os.environ["SENDER"]
 # For one recipient
 # RECIPIENT = os.environ["RECIPIENT"]
-
-# Fo r multiple recipients, split the string by comma
+# For multiple recipients, split the string by comma
 RECIPIENT = os.getenv("RECIPIENT").split(",")
 
 PASSWORD = os.environ["GMAIL_APP_PASSWORD"]
