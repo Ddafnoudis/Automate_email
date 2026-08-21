@@ -2,7 +2,7 @@
 Automate_email
 
 # Objective
-Create an script where a specific and defined email will be send to recipients for a specific period. 
+Create a script where a specific and defined email will be send to recipients for a specific period. 
 
 # General Requirements
 ### How to find the HOST name and the PORT number?
